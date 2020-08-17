@@ -1,0 +1,181 @@
+1. Detect Capital
+Given a word, you need to judge whether the usage of capitals in it is right or not.
+We define the usage of capitals in a word to be right when one of the following cases holds:
+    All letters in this word are capitals, like "USA".
+    All letters in this word are not capitals, like "leetcode".
+    Only the first letter in this word is capital, like "Google".
+Otherwise, we define that this word doesn't use capitals in a right way. 
+Input: "FlaG"
+Output: False
+
+2. Design HashSet
+Design a HashSet without using any built-in hash table libraries.
+To be specific, your design should include these functions:
+    add(value): Insert a value into the HashSet. 
+    contains(value) : Return whether the value exists in the HashSet or not.
+    remove(value): Remove a value in the HashSet. If the value does not exist in the HashSet, do nothing.
+
+3. Valid Palindrome
+Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+Note: For the purpose of this problem, we define empty string as valid palindrome.
+s consists only of printable ASCII characters.
+Input: "A man, a plan, a canal: Panama"
+Output: true
+Input: "race a car"
+Output: false
+
+4. Power of Four
+Given an integer (signed 32 bits), write a function to check whether it is a power of 4.
+Input: 16   Output: true
+Input: 5    Output: false
+
+5. Add and Search Word - Data structure design
+Design a data structure that supports the following two operations:
+void addWord(word)
+bool search(word)
+search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.
+ou may assume that all words are consist of lowercase letters a-z
+addWord("bad")
+addWord("dad")
+addWord("mad")
+search("pad") -> false
+search("bad") -> true
+search(".ad") -> true
+search("b..") -> true
+
+6. Find All Duplicates in an Array
+Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+Find all the elements that appear twice in this array.
+Could you do it without extra space and in O(n) runtime?
+Input: [4,3,2,7,8,2,3,1]    Output: [2,3]
+
+7. Vertical Order Traversal of a Binary Tree
+Given a binary tree, return the vertical order traversal of its nodes values.
+For each node at position (X, Y), its left and right children respectively will be at positions (X-1, Y-1) and (X+1, Y-1).
+Running a vertical line from X = -infinity to X = +infinity, whenever the vertical line touches some nodes, 
+we report the values of the nodes in order from top to bottom (decreasing Y coordinates).
+If two nodes have the same position, then the value of the node that is reported first is the value that is smaller.
+Return an list of non-empty reports in order of X coordinate.  Every report will have a list of values of nodes.
+Input: [1,2,3,4,5,6,7]
+Output: [[4],[2],[1,5,6],[3],[7]]
+Explanation: 
+The node with value 5 and the node with value 6 have the same position according to the given scheme.
+However, in the report "[1,5,6]", the node value of 5 comes first since 5 is smaller than 6.
+
+8. Path Sum III
+You are given a binary tree in which each node contains an integer value.
+Find the number of paths that sum to a given value.
+The path does not need to start or end at the root or a leaf, but it must go downwards (traveling only from parent nodes to child nodes).
+The tree has no more than 1,000 nodes and the values are in the range -1,000,000 to 1,000,000. 
+root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8
+      10
+     /  \
+    5   -3
+   / \    \
+  3   2   11
+ / \   \
+3  -2   1
+
+Return 3. The paths that sum to 8 are:
+1.  5 -> 3
+2.  5 -> 2 -> 1
+3. -3 -> 11
+
+9. Rotting Oranges
+In a given grid, each cell can have one of three values:
+    the value 0 representing an empty cell;
+    the value 1 representing a fresh orange;
+    the value 2 representing a rotten orange.
+Every minute, any fresh orange that is adjacent (4-directionally) to a rotten orange becomes rotten.
+Return the minimum number of minutes that must elapse until no cell has a fresh orange.  If this is impossible, return -1 instead.
+Input: [[2,1,1],[1,1,0],[0,1,1]]
+Output: 4
+
+10. Excel Sheet Column Number
+Given a column title as appear in an Excel sheet, return its corresponding column number.
+For example:
+A -> 1
+B -> 2
+C -> 3
+...
+Z -> 26
+AA -> 27
+AB -> 28 
+
+Input: "AB"
+Output: 28
+
+11. H-Index
+Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher's h-index.
+According to the definition of h-index on Wikipedia: "A scientist has index h if h of his/her N papers have at least h citations each, 
+and the other N − h papers have no more than h citations each."
+Input: citations = [3,0,6,1,5]
+Output: 3 
+Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of them had 
+             received 3, 0, 6, 1, 5 citations respectively. 
+             Since the researcher has 3 papers with at least 3 citations each and the remaining 
+             two with no more than 3 citations each, her h-index is 3.
+If there are several possible values for h, the maximum one is taken as the h-index.
+
+12. Pascal's Triangle II
+Given a non-negative index k where k ≤ 33, return the kth index row of the Pascal's triangle.
+Note that the row index starts from 0.
+Input: 3
+Output: [1,3,3,1]
+
+13. Iterator for Combination
+Design an Iterator class, which has:
+    A constructor that takes a string characters of sorted distinct lowercase English letters and a number combinationLength as arguments.
+    A function next() that returns the next combination of length combinationLength in lexicographical order.
+    A function hasNext() that returns True if and only if there exists a next combination.
+
+CombinationIterator iterator = new CombinationIterator("abc", 2); // creates the iterator.
+iterator.next(); // returns "ab"
+iterator.hasNext(); // returns true
+iterator.next(); // returns "ac"
+iterator.hasNext(); // returns true
+iterator.next(); // returns "bc"
+iterator.hasNext(); // returns false
+
+14. Longest Palindrome
+Given a string which consists of lowercase or uppercase letters, find the length of the longest palindromes that can be built with those letters.
+This is case sensitive, for example "Aa" is not considered a palindrome here.
+Note:
+Assume the length of given string will not exceed 1,010. 
+Input: "abccccdd"    Output: 7
+Explanation: One longest palindrome that can be built is "dccaccd", whose length is 7.
+
+15. Non-overlapping Intervals
+Given a collection of intervals, find the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
+Input: [[1,2],[2,3],[3,4],[1,3]]
+Output: 1
+Explanation: [1,3] can be removed and the rest of intervals are non-overlapping.
+Input: [[1,2],[1,2],[1,2]]
+Output: 2
+Explanation: You need to remove two [1,2] to make the rest of intervals non-overlapping.
+
+16. Best Time to Buy and Sell Stock III
+Say you have an array for which the ith element is the price of a given stock on day i.
+Design an algorithm to find the maximum profit. You may complete at most two transactions.
+Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
+Input: [3,3,5,0,0,3,1,4]
+Output: 6
+Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.
+             Then buy on day 7 (price = 1) and sell on day 8 (price = 4), profit = 4-1 = 3.
+			 
+17. Distribute Candies to People
+We distribute some number of candies, to a row of n = num_people people in the following way:
+We then give 1 candy to the first person, 2 candies to the second person, and so on until we give n candies to the last person.
+Then, we go back to the start of the row, giving n + 1 candies to the first person, n + 2 candies to the second person, and so on until we give 2 * n candies to the last person.
+This process repeats (with us giving one more candy each time, and moving to the start of the row after we reach the end) until we run out of candies.  The last person will receive all of our remaining candies (not necessarily one more than the previous gift).
+Return an array (of length num_people and sum candies) that represents the final distribution of candies.
+Constraints:
+    1 <= candies <= 10^9
+    1 <= num_people <= 1000
+
+Input: candies = 7, num_people = 4
+Output: [1,2,3,1]
+Input: candies = 10, num_people = 3
+Output: [5,2,3]
+
+		 

@@ -1,0 +1,17 @@
+1. Detect Capital
+2. Design HashSet
+3. Valid Palindrome
+4. Power of Four
+5. Add and Search Word - Data structure design
+6. Find All Duplicates in an Array
+7. Vertical Order Traversal of a Binary Tree
+8. Path Sum III
+9. Rotting Oranges
+10. Excel Sheet Column Number
+11. H-Index
+12. Pascal's Triangle II
+13. Iterator for Combination
+14. Longest Palindrome
+15. Non-overlapping Intervals
+16. Best Time to Buy and Sell Stock III
+17. Distribute Candies to People
